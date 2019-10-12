@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: by.zmitser
+---
+testFramework: spek
+sourceLanguage: kotlin

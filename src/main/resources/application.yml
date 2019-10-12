@@ -1,0 +1,8 @@
+micronaut:
+    application:
+        name: mssc-brewery-consumer
+brewery:
+    client:
+        beer:
+            url: http://localhost:8080
+            path: /api/v1/beers
