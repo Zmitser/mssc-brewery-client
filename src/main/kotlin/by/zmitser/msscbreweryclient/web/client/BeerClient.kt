@@ -1,8 +1,11 @@
-package by.zmitser.web.client
+package by.zmitser.msscbreweryclient.web.client
 
-import by.zmitser.web.model.BeerDto
+import by.zmitser.msscbreweryclient.web.model.BeerDto
 import io.micronaut.http.HttpResponse
 import io.micronaut.http.annotation.Get
+import io.micronaut.http.annotation.PathVariable
+import io.micronaut.http.annotation.Post
+import io.micronaut.http.annotation.Put
 import io.micronaut.http.client.annotation.Client
 import java.util.*
 
@@ -11,4 +14,12 @@ interface BeerClient {
 
     @Get("/{id}")
     fun findOne(id: UUID): HttpResponse<BeerDto>
+
+    @Post
+    fun save(beer: BeerDto): HttpResponse<BeerDto>
+
+    @Put("/{id}")
+    fun update(@PathVariable id: UUID, beer: BeerDto):HttpResponse<Any>
+
+
 }
