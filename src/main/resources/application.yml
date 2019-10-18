@@ -6,3 +6,6 @@ brewery:
         beer:
             url: http://localhost:8080
             path: /api/v1/beers
+        customer:
+            url: http://localhost:8080
+            path: /api/v1/customers

@@ -36,4 +36,9 @@ class BeerClientTest(private val client: BeerClient) {
         val beer = BeerDto("Updated Beer for me", "Pale Ale")
         client.update(randomUUID(), beer)
     }
+
+    @Test
+    fun deleteTest() {
+       client.delete(randomUUID())
+    }
 }

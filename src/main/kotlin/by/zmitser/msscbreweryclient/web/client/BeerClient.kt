@@ -2,10 +2,7 @@ package by.zmitser.msscbreweryclient.web.client
 
 import by.zmitser.msscbreweryclient.web.model.BeerDto
 import io.micronaut.http.HttpResponse
-import io.micronaut.http.annotation.Get
-import io.micronaut.http.annotation.PathVariable
-import io.micronaut.http.annotation.Post
-import io.micronaut.http.annotation.Put
+import io.micronaut.http.annotation.*
 import io.micronaut.http.client.annotation.Client
 import java.util.*
 
@@ -20,6 +17,9 @@ interface BeerClient {
 
     @Put("/{id}")
     fun update(@PathVariable id: UUID, beer: BeerDto):HttpResponse<Any>
+
+    @Delete("/{id}")
+    fun delete(@PathVariable id: UUID)
 
 
 }
